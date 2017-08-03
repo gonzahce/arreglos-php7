@@ -9,8 +9,11 @@
 		['nombre' => 'Daniel', 'score' => 1],
 	];
 
-	dd(array_first($usuario, function($usuario, $key){
-		return array_get($usuario, 'score') > 200;
+	#dd(array_last($usuario));
+
+	#getting the callback to reverse
+	dd(array_last($usuario, function($usuario, $key){
+		return array_get($usuario, 'score') == 55;
 	}));
 
 ?>

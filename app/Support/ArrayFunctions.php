@@ -61,4 +61,21 @@ class ArrayFunctions{
 		}
 		return $default;
 	}
+
+	#retrieving the las item function
+	public static function last($array, $callback = null, $default = null){
+		#check if callback exists
+		if(is_null($callback)){
+			#if array is empty return $default
+			if(empty($array)){
+				return $default;
+			}
+			return end($array);
+		}
+		#convert last item in the first
+		#parametro TRUE to switch keys too
+		#dd(array_reverse($array, true));
+
+		return self::first(array_reverse($array, true), $callback, $default);
+	}
 }

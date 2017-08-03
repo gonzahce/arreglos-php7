@@ -11,3 +11,7 @@ function array_get($array, $key, $default = null){
 function array_first($array, $callback = null, $default = null){
 	return ArrayFunctions::first($array, $callback, $default);
 }
+
+function array_last($array, $callback = null, $default = null){
+	return ArrayFunctions::last($array, $callback, $default);
+}

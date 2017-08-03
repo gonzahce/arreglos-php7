@@ -17,6 +17,6 @@
 		]
 	];
 
-	dd(array_get($usuario, 'pais.bandera.url'));
+	dd(array_get($usuario, 'temas.1.title'));
 
 ?>

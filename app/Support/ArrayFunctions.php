@@ -41,4 +41,9 @@ class ArrayFunctions{
 		}
 		return $array;
 	}
+
+	public static function first($array, $callback = null, $default = null){
+
+	}
+
 }

@@ -43,7 +43,22 @@ class ArrayFunctions{
 	}
 
 	public static function first($array, $callback = null, $default = null){
+		#check if callback exists
+		if(is_null($callback)){
+			#if array is empty return $default
+			if(empty($array)){
+				return $default;
+			}
+			foreach ($array as $item) {
+				return $item;
+			}
+		}
 
+		foreach ($array as $key => $value) {
+			if(call_user_func($callback, $value, $key)){
+				return $value;
+			}
+		}
+		return $default;
 	}
-
 }

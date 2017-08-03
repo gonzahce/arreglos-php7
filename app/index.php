@@ -3,20 +3,14 @@
 	require '../vendor/autoload.php';
 
 	$usuario = [
-		'nombre' => 'Kiik',
-		'temas' => [
-			['title' => 'tema uno'],
-			['title' => 'tema dos']
-		],
-		'pais' => [
-			'nombre' => 'vzla',
-			'bandera' => [
-				'url' => 'ruta.png',
-				'tamano' => 32
-			]
-		]
+		['nombre' => 'Jose', 'score' => 55],
+		['nombre' => 'Luis', 'score' => 100],
+		['nombre' => 'Carlos', 'score' => 400],
+		['nombre' => 'Daniel', 'score' => 1],
 	];
 
-	dd(array_get($usuario, 'temas.1.title'));
+	dd(array_first($usuario, function($usuario, $key){
+		return array_get($usuario, 'score') > 200;
+	}));
 
 ?>

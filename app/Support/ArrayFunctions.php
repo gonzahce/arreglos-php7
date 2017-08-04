@@ -78,4 +78,19 @@ class ArrayFunctions{
 
 		return self::first(array_reverse($array, true), $callback, $default);
 	}
+
+	#retorna una array dependiendo de una condicional
+	public static function where($array, $callback){
+
+		return array_filter($array, $callback, ARRAY_FILTER_USE_BOTH);
+
+	}
+
+	#retorna una array dependiendo de una condicional
+	public static function only($array, $key){
+
+		return array_intersect_key($array, (array_flip((array) $key)));
+
+	}
+
 }

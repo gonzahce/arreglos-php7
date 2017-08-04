@@ -15,3 +15,11 @@ function array_first($array, $callback = null, $default = null){
 function array_last($array, $callback = null, $default = null){
 	return ArrayFunctions::last($array, $callback, $default);
 }
+
+function array_where($array, $callback){
+	return ArrayFunctions::where($array, $callback);
+}
+
+function array_only($array, $key){
+	return ArrayFunctions::only($array, $key);
+}

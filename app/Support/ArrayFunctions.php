@@ -93,4 +93,22 @@ class ArrayFunctions{
 
 	}
 
+	public static function has($array, $key){
+
+		if (is_null($key)){
+			return false;
+		}
+
+		$keys = (array) $key;
+
+		if($keys == []){
+			return false;
+		}
+
+		foreach ($keys as $key) {
+			# code...
+		}
+
+	}
+
 }

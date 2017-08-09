@@ -23,3 +23,7 @@ function array_where($array, $callback){
 function array_only($array, $key){
 	return ArrayFunctions::only($array, $key);
 }
+
+function array_has($array, $key){
+	return ArrayFunctions::has($array, $key);
+}

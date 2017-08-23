@@ -39,8 +39,8 @@
 		]
 	];
 
-	#dd(array_only($usuario, ['nombre', 'pais']));
+	dd(array_only($usuario, ['nombre', 'pais']));
 
-	dd(array_has($usuario, ['nombre', 'pais']));
+	#dd(array_has($usuario, ['nombre', 'pais']));
 
 ?>

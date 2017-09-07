@@ -15,58 +15,7 @@
 	
 	#getting the callback to reverse
 	dd(array_last($usuario, function($usuario, $key){
-		return array_get($usuario, 'score') == 55;
+		return array_get($usuario, 'nombre') == 'Jose';
 	}));
-	
-
-<<<<<<< HEAD
-	// dd(array_where($usuario, function($usuario, $key){
-	// 	return array_get($usuario, 'score') >= 20;
-	// }));
-	
-
-	// $usuario = [
-	// 	'nombre' => 'carlos',
-	// 	'temas' => [
-	// 		['title' => 'tema uno'],
-	// 		['title' => 'tema dos'],
-	// 	],
-	// 	'pais' => [
-	// 		'nombre' => 'vzla',
-	// 		'bandera' => [
-	// 			'url' => 'ruta.png',
-	// 			'tamano' => 32
-	// 		]
-	// 	]
-	// ];
-
-	//dd(array_only($usuario, ['nombre', 'pais']));
-
-	//dd(array_has($usuario, ['nombre', 'pais']));
-=======
-	dd(array_where($usuario, function($usuario, $key){
-		return array_get($usuario, 'score') >= 20;
-	}));
-	*/
-
-	$usuario = [
-		'nombre' => 'carlos',
-		'temas' => [
-			['title' => 'tema uno'],
-			['title' => 'tema dos'],
-		],
-		'pais' => [
-			'nombre' => 'vzla',
-			'bandera' => [
-				'url' => 'ruta.png',
-				'tamano' => 32
-			]
-		]
-	];
-
-	dd(array_only($usuario, ['nombre', 'pais']));
-
-	#dd(array_has($usuario, ['nombre', 'pais']));
->>>>>>> origin/master
 
 ?>

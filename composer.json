@@ -1,11 +1,15 @@
 {
-	"autoload": {
-		"psr-4": {
-			"App\\": "app"
-		},
-		"files": ["app/Support/functions.php"]
-	},
-	"require": {
-		"larapack/dd": "1.*"
-	}
+    "name": "app/arrays",
+    "autoload": {
+        "psr-4": {
+            "App\\Arrays\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos Gonzalez",
+            "email": "carlosegonzax@gmail.com"
+        }
+    ],
+    "require": {}
 }

@@ -10,7 +10,6 @@ class ComposerStaticInit3563fe666efd547f0185ab7c2f939541
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '0e423a14e27410a071e5d815d3ffc856' => __DIR__ . '/..' . '/larapack/dd/src/helper.php',
-        '63f75f9580ee51d8dd0ac47096ca7aa7' => __DIR__ . '/../..' . '/app/Support/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -21,7 +20,7 @@ class ComposerStaticInit3563fe666efd547f0185ab7c2f939541
         ),
         'A' => 
         array (
-            'App\\' => 4,
+            'App\\Arrays\\' => 11,
         ),
     );
 
@@ -34,10 +33,14 @@ class ComposerStaticInit3563fe666efd547f0185ab7c2f939541
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
-        'App\\' => 
+        'App\\Arrays\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/src',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -45,6 +48,7 @@ class ComposerStaticInit3563fe666efd547f0185ab7c2f939541
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3563fe666efd547f0185ab7c2f939541::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3563fe666efd547f0185ab7c2f939541::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3563fe666efd547f0185ab7c2f939541::$classMap;
 
         }, null, ClassLoader::class);
     }
